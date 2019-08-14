@@ -17,7 +17,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: "module"
   },
-  plugins: ["react", "jsx-a11y", "import", "react-hooks", "prettier", "root-import"],
+  plugins: ["react", "jsx-a11y", "import", "react-hooks", "prettier"],
   rules: {
     "prettier/prettier": "error",
     "react/jsx-filename-extension": ["error", { extensions: [".js", ".jsx"] }],
@@ -33,11 +33,12 @@ module.exports = {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn"
   },
-  settings: {
+  "settings": {
     "import/resolver": {
       "babel-plugin-root-import": {
-        rootPathSuffix: "src"
-      },
-    },
-  },
+        "rootPathPrefix": "~",
+        "rootPathSuffix": "src"
+      }
+    }
+  }
 };
