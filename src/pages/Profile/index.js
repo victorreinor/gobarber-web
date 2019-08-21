@@ -13,8 +13,7 @@ function Profile() {
   const profile = useSelector(state => state.user.profile);
 
   function handleSubmit(data) {
-    console.log('data,', data);
-    // dispatch(updateProfileRequest(data));
+    dispatch(updateProfileRequest(data));
   }
 
   return (

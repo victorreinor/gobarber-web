@@ -49,7 +49,7 @@ function AvatarInput() {
           type="file"
           id="avatar"
           accept="image/*"
-          date-file={file}
+          data-file={file}
           onChange={handleChange}
           ref={ref}
         />
